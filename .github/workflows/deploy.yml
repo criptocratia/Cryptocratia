@@ -23,6 +23,7 @@ jobs:
 
       - name: Build the Hugo site
         run: |
+          mkdir public
           touch public/.nojekyll  # Ensure Jekyll is disabled
           hugo --minify
 
