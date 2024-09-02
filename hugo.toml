@@ -38,11 +38,11 @@ breadcrumbs = true
 # Main menu pages
 [[params.menu]]
 name = "Prima Pagină"
-url = "/"
+url = "/Cryptocratia/"
 
 [[params.menu]]
 name = "Postări"
-url = "/posts"
+url = "/Cryptocratia/posts"
 
 [permalinks]
   posts = "/:year/:month/:title/"
