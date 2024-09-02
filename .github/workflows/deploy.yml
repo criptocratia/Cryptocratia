@@ -35,3 +35,6 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages  # Ensure this matches your GitHub Pages branch
           force_orphan: true
+
+    env:
+      HUGO_ENV: production
