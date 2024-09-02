@@ -25,12 +25,12 @@ O semnătură digitală este o operațiune criptografică care oferă dovada aut
 
 * **Verificare:** Pentru a verifica semnătura, destinatarul decriptează semnătura folosind cheia publică a semnatarului și compară hash-ul rezultat cu hash-ul documentului primit. Dacă acestea se potrivesc, semnătura este validă, confirmând că documentul nu a fost modificat și a fost semnat de deținătorul cheii private corespunzătoare.
 
-## 2. Rolul Cheii Private
+## Rolul Cheii Private
 
 Cheia privată este un element crucial în procesul de semnătură digitală. Ea este utilizată pentru a genera semnătura digitală (adică pentru a crea cryptograma hash-ului). Cheia privată trebuie păstrată în siguranță deoarece, dacă este compromisă, entități neautorizate ar putea semna documente în mod fraudulos.
 
-## 3. Ce este un QSCD?
-Un Dispozitiv de Creare a Semnăturilor Calificate (QSCD) este un dispozitiv hardware sau software care îndeplinește cerințele specifice conform regulamentului eIDAS pentru crearea semnăturilor electronice calificate (QES). Acesta este responsabil pentru asigurarea integrității și securității întregului proces de creare a semnăturii.
+## Ce este un QSCD?
+Un Dispozitiv de Creare a Semnăturilor Calificate (QSCD) este un dispozitiv hardware sau software care îndeplinește cerințele specifice conform regulamentului [eIDAS](https://digital-strategy.ec.europa.eu/ro/policies/eidas-regulation) pentru crearea semnăturilor electronice calificate (QES). Acesta este responsabil pentru asigurarea integrității și securității întregului proces de creare a semnăturii.
 
 **Funcțiile Cheie ale unui QSCD:**
 
@@ -50,18 +50,18 @@ QSCD-ul asigură că cheia privată este utilizată doar în cadrul mediului sec
 
 QSCD-ul este conceput să reziste la manipulări și să asigure că cheia privată rămâne securizată chiar și în fața atacurilor fizice sau încercărilor de a extrage cheia. De obicei, include măsuri precum stocarea securizată a cheii, criptarea și, posibil, protecții hardware.
 
-## 4. Clarificare privind "Semnătura Digitală" în acest Context
+## Clarificare privind "Semnătura Digitală" în acest Context
 Când ne referim la "semnătura digitală" în contextul unui QSCD, vorbim în principal despre rezultatul criptografic: hash-ul criptat (cryptograma) care este generat folosind cheia privată. Cheia privată în sine nu este semnătura digitală, ci mai degrabă instrumentul esențial utilizat pentru a crea semnătura digitală (cryptograma).
 
-## 5. De ce QSCD nu se Limitează doar la Generarea Cheilor
+## De ce QSCD nu se Limitează doar la Generarea Cheilor
 Deși generarea cheilor este o parte crucială a ceea ce face un QSCD, rolul său se extinde dincolo de simpla creare a cheii private. De asemenea, asigură că cheia este stocată în siguranță și utilizată doar în mediul protejat al dispozitivului pentru a crea semnături digitale. Rolul principal al QSCD-ului este de a proteja întregul ciclu de viață al cheii private, de la generare până la utilizare în semnare, asigurându-se că semnătura creată cu această cheie îndeplinește cerințele stricte pentru a fi recunoscută legal ca semnătură electronică calificată.
 
-## 6. Cum se Reliefează QSCD în Procesul de Semnătură
+## Cum se Reliefează QSCD în Procesul de Semnătură
 * **Procesul de Hashing:** Hashing-ul documentului are loc în afara QSCD-ului, de obicei în aplicația care solicită semnătura.
 
 * **Procesul de Semnare:** Aplicația trimite hash-ul (sau documentul) către QSCD, care apoi folosește cheia privată pentru a crea semnătura digitală (cryptograma hash-ului) și o returnează aplicației.
 
 * **Controlul Cheii:** Cheia privată nu părăsește niciodată QSCD-ul, asigurând că nu poate fi compromisă în timpul procesului de semnare.
 
-## Concluzie
+## Succint
 Un QSCD este mult mai mult decât un simplu instrument de generare a cheilor. Este un mediu de securitate complet, care generează, stochează și utilizează cheia privată într-un mod securizat pentru a crea o semnătură digitală (cryptograma hash-ului). "Semnătura digitală" în acest context se referă la rezultatul criptografic (hash-ul criptat) produs prin aplicarea cheii private, nu la cheia în sine. Rolul QSCD-ului este esențial în asigurarea că semnătura digitală este recunoscută legal ca o Semnătură Electronică Calificată conform eIDAS, ceea ce implică cerințe stricte de securitate și operaționale pentru a proteja întregul proces.
