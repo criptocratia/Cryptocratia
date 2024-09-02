@@ -1,0 +1,54 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-en'
+title = 'Cryptocrația'
+theme = 'typo'
+
+[taxonomies]
+tag = 'Criptografie'
+
+[params]
+# Meta description
+description = "Blog despre Semnatura Electronica"
+customCSS = ["css/custom.css"]
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Bună!'
+homeIntroContent = """
+În ultimii ani, de mai multe ori am fost în situația de a-mi aprofunda cunoștințele în semnătura electronică și subiectele conexe. 
+Am decis să structurez aceste cunoștințe aici.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Main menu pages
+[[params.menu]]
+name = "Prima Pagină"
+url = "/"
+
+[[params.menu]]
+name = "Postări"
+url = "/posts"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
