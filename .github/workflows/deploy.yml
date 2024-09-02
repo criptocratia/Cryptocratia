@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          submodules: true  # Ensure submodules are initialized
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true  # Ensure the extended version is used
 
       - name: Build the Hugo site
         run: hugo --minify
