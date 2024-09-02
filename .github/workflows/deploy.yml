@@ -3,10 +3,10 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger the workflow on push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Optionally, trigger the workflow on pull requests to main
+      - main
 
 jobs:
   build:
@@ -21,10 +21,6 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Install Node.js dependencies (if any)
-        run: |
-          npm install
-
       - name: Build the Hugo site
         run: hugo --minify
 
@@ -33,7 +29,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages  # Ensure this matches your GitHub Pages branch
+          publish_branch: gh-pages
           force_orphan: true
 
     env:
